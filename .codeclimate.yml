@@ -7,13 +7,10 @@ plugins:
     config: "./lint/.scss-lint.yml"
   fixme:
     enabled: true
-  editorconfig:
-    enabled: true
-    channel: beta
   tslint:
     enabled: true
     channel: beta
-    config: "./lint/tslint.json"
+    config: tslint.json
 exclude_patterns:
 - "**/node_modules/"
 - "coverage/"

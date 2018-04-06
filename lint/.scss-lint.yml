@@ -1,4 +1,6 @@
 # For Code Climate
+exclude: '**/font-awesome/**'
+
 linters:
   PropertySortOrder:
     enabled: false
