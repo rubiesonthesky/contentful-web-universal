@@ -5,14 +5,19 @@ plugins:
     enabled: true
   scss-lint:
     enabled: true
+    config: "./.config/.sass-lint.yml"
   fixme:
     enabled: true
+  editorconfig:
+    enabled: true
+    channel: beta
   tslint:
     enabled: true
     channel: beta
-    config: tslint.codeclimate.json
+    config: tslint.json
 exclude_patterns:
 - "**/node_modules/"
 - "coverage/"
 - "dist/"
 - "**/font_awesome/"
+- ".config"

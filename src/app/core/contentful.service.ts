@@ -1,9 +1,10 @@
-import { Observable } from 'rxjs/Rx';
-import { WatchQueryOptions } from 'apollo-client/core/watchQueryOptions';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { ActivatedRouteSnapshot, Router } from '@angular/router';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApolloClient, createNetworkInterface, IntrospectionFragmentMatcher, NetworkStatus } from 'apollo-client';
+import { WatchQueryOptions } from 'apollo-client/core/watchQueryOptions';
+import { Observable } from 'rxjs/Rx';
+
 import { environment } from '../../environments/environment';
 
 @Injectable()
@@ -16,7 +17,9 @@ export class ContentfulService {
     private router: Router) { }
 
   private async getContentfulSchema(event): Promise<any> {
-    return this.http.get(`${environment.apiUrl}/${event.name}/schema`).toPromise();
+    console.log('getContentfulSchema');
+    console.log( environment + ',' + event.name );
+    return this.http.get(`${environment}/${event.name}/schema`).toPromise();
   }
 
   getEvent() {
