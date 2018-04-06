@@ -1,11 +1,10 @@
----
 version: "2"
 plugins:
   shellcheck:
     enabled: true
   scss-lint:
     enabled: true
-    config: "./.config/.sass-lint.yml"
+    config: "./lint/.scss-lint.yml"
   fixme:
     enabled: true
   editorconfig:
@@ -14,10 +13,11 @@ plugins:
   tslint:
     enabled: true
     channel: beta
-    config: tslint.json
+    config: "./lint/tslint.json"
 exclude_patterns:
 - "**/node_modules/"
 - "coverage/"
 - "dist/"
 - "**/font_awesome/"
+- "**/fonts/**"
 - ".config"
